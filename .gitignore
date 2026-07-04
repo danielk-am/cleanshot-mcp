@@ -4,3 +4,6 @@ dist/
 .env
 .DS_Store
 *.tsbuildinfo
+
+# changelog watcher runtime state
+.watch/

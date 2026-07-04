@@ -1,0 +1,26 @@
+{
+  "_comment": "Source-of-truth manifest of the cleanshot:// commands this MCP implements. The changelog watcher (scripts/watch-changelog.mjs) diffs the live https://cleanshot.com/docs-api page against this file; a delta (new/removed command, or changed param set) is what triggers an auto-drafted PR. Keep this in sync with src/index.ts. `action` enum = copy|save|annotate|upload|pin.",
+  "docsUrl": "https://cleanshot.com/docs-api",
+  "lastSyncedVersion": "4.8.8",
+  "commands": {
+    "all-in-one": { "tool": "cleanshot_all_in_one", "params": ["x", "y", "width", "height", "display"], "minVersion": "4.2" },
+    "capture-area": { "tool": "cleanshot_capture_area", "params": ["x", "y", "width", "height", "display", "action"], "minVersion": "3.5.1" },
+    "capture-previous-area": { "tool": "cleanshot_capture_previous_area", "params": ["action"], "minVersion": "3.5.1" },
+    "capture-fullscreen": { "tool": "cleanshot_capture_fullscreen", "params": ["action"], "minVersion": "3.5.1" },
+    "capture-window": { "tool": "cleanshot_capture_window", "params": ["action"], "minVersion": "3.5.1" },
+    "self-timer": { "tool": "cleanshot_self_timer", "params": ["action"], "minVersion": "3.5.1" },
+    "scrolling-capture": { "tool": "cleanshot_scrolling_capture", "params": ["x", "y", "width", "height", "display", "start", "autoscroll"], "minVersion": "3.5.1" },
+    "pin": { "tool": "cleanshot_pin", "params": ["filepath"], "minVersion": "3.5.1" },
+    "record-screen": { "tool": "cleanshot_record_screen", "params": ["x", "y", "width", "height", "display"], "minVersion": "3.5.1" },
+    "capture-text": { "tool": "cleanshot_capture_text", "params": ["filepath", "x", "y", "width", "height", "display", "linebreaks"], "minVersion": "3.8.1" },
+    "open-annotate": { "tool": "cleanshot_open_annotate", "params": ["filepath"], "minVersion": "3.8.1" },
+    "open-from-clipboard": { "tool": "cleanshot_open_from_clipboard", "params": [], "minVersion": "3.5.1" },
+    "toggle-desktop-icons": { "tool": "cleanshot_toggle_desktop_icons", "params": [], "minVersion": "3.5.1" },
+    "hide-desktop-icons": { "tool": "cleanshot_hide_desktop_icons", "params": [], "minVersion": "3.8.1" },
+    "show-desktop-icons": { "tool": "cleanshot_show_desktop_icons", "params": [], "minVersion": "3.8.1" },
+    "add-quick-access-overlay": { "tool": "cleanshot_add_quick_access_overlay", "params": ["filepath"], "minVersion": "3.8.1" },
+    "open-history": { "tool": "cleanshot_open_history", "params": [], "minVersion": "4.4" },
+    "restore-recently-closed": { "tool": "cleanshot_restore_recently_closed", "params": [], "minVersion": "3.5.1" },
+    "open-settings": { "tool": "cleanshot_open_settings", "params": ["tab"], "minVersion": "4.7" }
+  }
+}
